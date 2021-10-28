@@ -1,29 +1,49 @@
 <div>
-    <form wire:submit.prevent="submit" method="POST">
-    <div class="col-span-6 sm:col-span-3">
-        <select wire:model="timetable.subjectPPs" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-            <option value="" selected>Kolegij: </option>
-            @foreach($subjectPPs as $subjectPP)
-                <option value="{{ $subjectPP->id }}">{{ $subjectPP->name }}</option>
+    @if(session()->has('message'))
+        <div class="alert alert-success"> {{ session('message')}} </div>
+    @endif
+    <table class="items-center bg-transparent w-full table table-bordered ">
+        <thead>
+            <th class="text-center" width="125">Vrijeme</th>
+            @foreach($weekDays as $day)
+                <th class="text-center">{{ $day }}</th>
             @endforeach
-        </select>
+        </thead>
+        <tbody class="item-center">
+            @foreach($timeRange as $time)
+                <tr >
+                    <td class="text-center">
+                        {{ $time['start'] }} - {{ $time['end'] }}
+                    </td>
+                    @foreach($weekDays as $day)  
+                        <td>
+                            <div>
+                                    @php($lecturePeriod = $lecturePeriods->where('day', $day)->where('hours', $time['start'])->first())                               
+                                @if($lecturePeriod)                                 
+                                    <form>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label type="text" wire:model="$lecturePeriod->subjectPP->name " value="{{ $lecturePeriod->subjectPP->name  }}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$lecturePeriod->subjectPP->name}}</label>
+                                        </div>
+                                
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label type="text" wire:model="$lecturePeriod->classroom->name " value="{{ $lecturePeriod->classroom->name  }}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$lecturePeriod->classroom->name }}</label>
+                                        </div>
 
-    </div>
-
-    <div class="col-span-6 sm:col-span-3">
-        <select wire:model="timetable.classrooms" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-            <option value="" selected>Predavaonica: </option>
-            @foreach($classrooms as $classroom)
-                <option value="{{ $classroom->id }}">{{ $classroom->name }}</option>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label type="text" wire:model="$lecturePeriod->comment "  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$lecturePeriod->comment}}</label>
+                                        </div>
+                                        
+                                        <button class="btn btn-success" type="button" data-toggle="modal" data-target="#updateModal" wire:click="edit({{ $lecturePeriod->id }})"> Uredi </button>
+                                    </form>
+                                    @include('livewire.update')                          
+                                @else
+                                    @include('livewire.create', ['day' => $day, 'hours' => $time['start']])                           
+                                @endif                          
+                            </div> 
+                        </td>            
+                    @endforeach
+                </tr>
             @endforeach
-        </select>
-    </div>
-
-    <div>
-        <input type="text" wire:model="timetable.comments" id="comment" placeholder="Komentar:" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-    </div>
-    <button type="submit">
-        save
-    </button>
-    </form>
+        </tbody>
+    </table>
 </div>
