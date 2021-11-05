@@ -20,7 +20,7 @@ class CreateLecturePeriodsTable extends Migration
             $table->string('day');
             $table->string('hours');
             $table->string('week');
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->timestamps();
 
             $table->foreign('subjectPP_id')

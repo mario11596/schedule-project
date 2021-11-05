@@ -2,6 +2,31 @@
     @if(session()->has('message'))
         <div class="alert alert-success"> {{ session('message')}} </div>
     @endif
+
+    <div class="row mb-3 p-2 ">
+        <div class="col-md-3">
+            <label>Smjer</label>
+            <select wire:model="byCourse" class="form-control">
+                <option value="" selected>Nije odabrano</option>
+                <option value="smjer1">Smjer 1</option>
+                <option value="smjer2">Smjer 2</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>Semestar</label>
+            <select wire:model="bySemester" class="form-control">
+                <option value="" selected>Nije odabrano</option>
+                <option value="ljetniSemestar">Ljetni semestar</option>
+                <option value="zimskiSemestar">Zimski semestar</option>
+            </select>
+        </div>
+        
+        <div class="col-md-2 py-4">
+            <button class="btn btn-primary"  wire:click="filterSearch()">Pretraži</button>
+        </div>
+    </div>
+
     <table class="items-center bg-transparent w-full table table-bordered ">
         <thead>
             <th class="text-center" width="125">Vrijeme</th>

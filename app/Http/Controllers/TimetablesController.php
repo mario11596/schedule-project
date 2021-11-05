@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\LecturePeriod;
+use App\Models\SubjectPP;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -10,13 +11,14 @@ class TimetablesController extends Controller
 {
 
     public function index(){
-        $lecturePeriods = LecturePeriod::all();
+       
+        $subjectAll = SubjectPP::all();
 
         $weekDays = [
             '1' => 'Ponedjeljak',
             '2' => 'Utorak',
             '3' => 'Srijeda',
-            '4' => 'Četvrtak',
+            '4' => 'Cetvrtak',
             '5' => 'Petak',
             '6' => 'Subota'
         ];
@@ -34,7 +36,7 @@ class TimetablesController extends Controller
         } while ($time->format("H:i") !== $to);
 
         
-        return view('timetable.index', compact('weekDays','timeRange','lecturePeriods'));
+        return view('timetable.index', compact('weekDays','timeRange', 'subjectAll'));
     }
 
     

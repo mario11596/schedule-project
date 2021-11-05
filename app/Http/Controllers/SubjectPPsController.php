@@ -41,6 +41,7 @@ class SubjectPPsController extends Controller
         $subject->course = request('course');
         $subject->semester = request('semester');
         $subject->hours = request('hours');
+        $subject->current_hours = request('hours');
 
         $subject->save();
         return redirect('/subject')->with('success', 'Uspješno spremljen novi predmet!');

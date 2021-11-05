@@ -19,6 +19,7 @@ class CreateSubjectPPSTable extends Migration
             $table->string('course');
             $table->string('semester');
             $table->integer('hours');
+            $table->integer('current_hours');
             $table->timestamps();
         });
     }

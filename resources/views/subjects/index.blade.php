@@ -50,6 +50,7 @@
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Smjer</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Semestar održavanja</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Fond sati</th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Trenutan broj sati</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Opcije</th>
 
                 </tr>
@@ -62,6 +63,7 @@
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $subject->course }}</td>
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $subject->semester }}</td>
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $subject->hours }}</td>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $subject->current_hours }}</td>
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 flex justify-between" >
                       <a href="{{ route('subjects.edit', $subject->id) }}"> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
