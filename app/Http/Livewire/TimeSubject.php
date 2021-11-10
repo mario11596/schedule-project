@@ -402,6 +402,8 @@ class TimeSubject extends Component
 
     public $kolegiji_svi;
 
+
+
     public function mount(){
         $this->classrooms = Classroom::all();
         //$this->subjectPPs = SubjectPP::all();
@@ -411,31 +413,11 @@ class TimeSubject extends Component
         $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->get();
         
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
-
-        //$this->render();
     }
 
     public function render()
     {
-         //ovdje uhvatiti cijelu bazu
-        /*$this->lecturePeriods = LecturePeriod::whereHas('getLecture', function($query){
-            $query->where('course', 'smjer2');
-        })->with('getLecture')->get();*/
-
-        //$this->lecturePeriods = LecturePeriod::whereHas('subjectPP')->where('subjectPP_id', 1)->get();
-
-        //dd($this->lecturePeriods);
-
-        /*$this->lecturePeriods = LecturePeriod::all();
-        return view('livewire.time-subject',[
-            'lecturePeriods' => $this->lecturePeriods
-        ]);*/
-
-       
-        //$this->kolegiji_svi = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->pluck('id');
-       // $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->get();
-     
-       
+        
         return view('livewire.time-subject',[
             'lecturePeriods' => $this->lecturePeriods]);
     }
@@ -483,26 +465,28 @@ class TimeSubject extends Component
         $hours_duration = SubjectPP::where('id',$this->{"kolegij_".$dayString."_".$timeString})->first();
         $hours_duration->current_hours = ($hours_duration->current_hours) - 1;
         $hours_duration->save();
-        //$this->reset('timetable');
+       
         session()->flash('message','Uspješno spremljen novi termin!');
-        
+
+       $this->mount();
     }
 
-    public function delete(LecturePeriod $lecturePeriod){
-        if($lecturePeriod){
-            
-            $hours_duration = SubjectPP::where('id',$lecturePeriod->subjectPP_id)->first();
+    public function delete(){
+        //dd($this->data_id);
+        $data = LecturePeriod::find($this->data_id);
+
+        if($data){
+            $hours_duration = SubjectPP::where('id',$data->subjectPP_id)->first();
             $hours_duration->current_hours = ($hours_duration->current_hours) + 1;
             $hours_duration->save();
 
-            //LecturePeriod::where('id',$id)->delete();
-            $lecturePeriod->delete();
-            
-
+            LecturePeriod::find($data->id)->delete();
+        
             session()->flash('message','Uspješno izbrisan termin!');
             return redirect(request()->header('Referer'));
-        }
+        }   
     }
+
     public function edit($id)
     {
         $data = LecturePeriod::findOrFail($id);

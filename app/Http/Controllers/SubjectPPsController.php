@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SubjectPP;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class SubjectPPsController extends Controller
@@ -12,13 +13,6 @@ class SubjectPPsController extends Controller
         $subjects = SubjectPP::all();
 
         return view('subjects.index', compact('subjects'));
-    }
-
-    public function show($id){
-
-        $subject = SubjectPP::where('id', $id)->first();
-
-        return view('contacts.show', compact('subject'));
     }
 
 
@@ -79,5 +73,22 @@ class SubjectPPsController extends Controller
         SubjectPP::where('id', $id)->delete();
 
         return redirect('/subject');
+    }
+
+    public function search(Request $request){
+        $search = $request->input('search') ? : "";
+
+        $subjects = SubjectPP::query()
+        ->where(function(Builder $builder) use ($search){
+            $builder->where('name', 'LIKE', "%{$search}%")
+            ->orWhere('course', 'LIKE', "%{$search}%");
+        })->get();
+        
+
+        if(count($subjects) > 0){
+            return view('subjects.index', compact('subjects','search'));
+        } else {
+            return redirect('/subject')->with('warning', 'Nema traženog kolegija!');
+        }
     }
 }

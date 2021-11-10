@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardsController;
 use App\Http\Controllers\SubjectPPsController;
 use App\Http\Controllers\TimetablesController;
 use Illuminate\Support\Facades\Route;
@@ -36,8 +37,12 @@ Route::group(['auth:sanctum', 'verified'], function(){
     Route::get('/subject/{subject}/edit', [SubjectPPsController::class, 'edit'])->name('subjects.edit');
     Route::post('/subject/{subject}', [SubjectPPsController::class, 'update'])->name('subjects.update');
     Route::get('/subject/{subject}', [SubjectPPsController::class, 'destroy'])->name('subjects.destroy');
+    Route::get('/search', [SubjectPPsController::class, 'search'])->name('search');
 
     //Routes for Timetable
     Route::get('/timetable', [TimetablesController::class, 'index'])->name('timetable.index');
 
+    //Routes for Dashboard
+    Route::get('/dashboard', [DashboardsController::class, 'index'])->name('dashboard');
+   
 });

@@ -1,14 +1,87 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+
+        <div class="flex justify-between">       
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight ">
+                {{ __('Raspored sati') }}
+            </h2>
+            <a class="btn btn-primary" href="">PDF format</a>
+        </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-2">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <form action="{{ route('dashboard') }}" method="get">
+                <div class="row mb-3 p-2 ">
+                    <div class="col-md-3">
+                        <label>Smjer</label>
+                        <select name="byCourse" class="form-control">
+                            <option value="" selected>Nije odabrano</option>
+                            <option value="smjer1" {{( $byCourse == 'smjer1') ? 'selected' : ''}}>Smjer 1</option>
+                            <option value="smjer2" {{( $byCourse == 'smjer2') ? 'selected' : ''}}>Smjer 2</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Semestar</label>
+                        <select name="bySemester" class="form-control">
+                            <option value="" selected>Nije odabrano</option>
+                            <option value="ljetniSemestar" {{( $bySemester == 'ljetniSemestar') ? 'selected' : ''}}>Ljetni semestar</option>
+                            <option value="zimskiSemestar" {{( $bySemester == 'zimskiSemestar') ? 'selected' : ''}}>Zimski semestar</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-2 py-4">
+                        <button class="btn btn-primary" type="submit"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+            <table class="items-center bg-transparent w-full table table-bordered ">
+                <thead>
+                    <th class="text-center" width="125">Vrijeme</th>
+                    @foreach($weekDays as $day)
+                        <th class="text-center">{{ $day }}</th>
+                    @endforeach
+                </thead>
+                <tbody class="item-center">
+                    @foreach($timeRange as $time)
+                        <tr >
+                            <td class="text-center">
+                                {{ $time['start'] }} - {{ $time['end'] }}
+                            </td>
+                            @foreach($weekDays as $day)  
+                                <td class="col-sm-2 col-md-2 col-lg-2">
+                                    <div>
+                                            @php($lecturePeriod = $lecturePeriods->where('day', $day)->where('hours', $time['start'])->first())                               
+                                        @if($lecturePeriod)                                 
+                                            <form>
+                                                <div class="col-span-6 sm:col-span-3 text-center">
+                                                   {{$lecturePeriod->subjectPP->name}}
+                                                </div>
+                                        
+                                                <div class="col-span-6 sm:col-span-3 text-center ">
+                                                    Predavaonica: {{$lecturePeriod->classroom->name }}
+                                                </div>
+
+                                                <div class="col-span-6 sm:col-span-3 text-center">
+                                                    Dodatni komentar: {{$lecturePeriod->comment}}
+                                                </div>     
+                                            </form>
+                                            @endif
+                                    </div> 
+                                </td>            
+                            @endforeach
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
             </div>
         </div>
     </div>

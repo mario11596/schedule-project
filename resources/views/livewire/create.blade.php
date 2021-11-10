@@ -3,16 +3,17 @@
     <div >
         @php($varijabla =  $day.'_'.$time['start'])      
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
                 <option value="{{ $subjectPP->id }}">{{ $subjectPP->name }}</option>
             @endforeach
             </select>
-            @error('kolegij_pon_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -29,6 +30,7 @@
     <div>
          @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -38,6 +40,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -54,6 +57,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -63,6 +67,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -79,6 +84,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -88,6 +94,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -104,6 +111,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -113,6 +121,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -129,6 +138,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -138,6 +148,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -154,6 +165,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -163,6 +175,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -179,6 +192,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -188,6 +202,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -204,6 +219,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -213,6 +229,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -223,12 +240,13 @@
         <div>
             <input type="text" wire:model="komentar_pon_16" placeholder="Komentar:" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
         </div>
-        <button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>>
+        <button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>
     </div>
 @elseif($time['start'] == '17:00' && $day == "Ponedjeljak")
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -238,6 +256,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -254,6 +273,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -263,6 +283,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -279,6 +300,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -288,6 +310,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -304,6 +327,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -313,6 +337,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -329,6 +354,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pon_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pon_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -338,6 +364,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pon_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pon_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -357,6 +384,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -366,6 +394,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -382,6 +411,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -391,6 +421,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -407,6 +438,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -416,6 +448,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -432,6 +465,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -441,6 +475,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -457,6 +492,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -466,6 +502,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -482,6 +519,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -491,6 +529,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -507,6 +546,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -516,6 +556,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -532,6 +573,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -541,6 +583,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -557,6 +600,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -566,6 +610,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -582,6 +627,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -591,6 +637,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+             @error('ucionica_uto_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -607,6 +654,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -616,6 +664,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -632,6 +681,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -641,6 +691,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -657,6 +708,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -666,6 +718,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -682,6 +735,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_uto_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_uto_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -691,6 +745,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_uto_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_uto_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -710,6 +765,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -719,6 +775,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -735,6 +792,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -744,6 +802,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+             @error('ucionica_sri_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -760,6 +819,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -769,6 +829,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -785,6 +846,7 @@
     <div>
          @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -794,6 +856,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -810,6 +873,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -819,6 +883,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -835,6 +900,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -844,6 +910,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -860,6 +927,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -869,6 +937,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -885,6 +954,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -894,6 +964,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -910,6 +981,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -919,6 +991,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -935,6 +1008,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -944,6 +1018,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -960,6 +1035,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -969,6 +1045,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -985,6 +1062,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -994,6 +1072,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1010,6 +1089,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1019,6 +1099,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1035,6 +1116,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sri_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sri_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1044,6 +1126,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sri_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sri_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1063,6 +1146,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1072,6 +1156,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1088,6 +1173,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1097,6 +1183,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1113,6 +1200,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1122,6 +1210,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1138,6 +1227,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1147,6 +1237,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1163,6 +1254,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1172,6 +1264,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1188,6 +1281,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1197,6 +1291,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1213,6 +1308,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1222,6 +1318,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1238,6 +1335,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1247,6 +1345,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1263,6 +1362,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1272,6 +1372,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1288,6 +1389,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1297,6 +1399,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1313,6 +1416,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1322,6 +1426,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1338,6 +1443,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1347,6 +1453,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1363,6 +1470,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1372,6 +1480,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1388,6 +1497,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_cet_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_cet_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1397,6 +1507,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_cet_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_cet_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1416,6 +1527,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1425,6 +1537,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1441,6 +1554,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1450,6 +1564,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1466,6 +1581,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1475,6 +1591,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1491,6 +1608,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1500,6 +1618,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1516,6 +1635,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1525,6 +1645,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1541,6 +1662,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1550,6 +1672,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1560,12 +1683,13 @@
         <div>
             <input type="text" wire:model="komentar_pet_13" placeholder="Komentar:" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
         </div>
-        <button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>>
+        <button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>
     </div>
 @elseif($time['start'] == '14:00' && $day == "Petak")
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1575,6 +1699,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1591,6 +1716,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1600,6 +1726,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1616,6 +1743,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1625,6 +1753,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1641,6 +1770,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1650,6 +1780,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1666,6 +1797,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1675,6 +1807,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1691,6 +1824,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1700,6 +1834,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1716,6 +1851,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1725,6 +1861,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1741,6 +1878,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_pet_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_pet_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1750,6 +1888,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_pet_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_pet_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1769,6 +1908,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1778,6 +1918,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_8') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_8" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1788,12 +1929,13 @@
         <div>
             <input type="text" wire:model="komentar_sub_8" placeholder="Komentar:" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
         </div>
-        <<button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>
+        <button class="btn btn-primary" wire:click="submit('{{ $varijabla }}')" > Spremi </button>
     </div>
 @elseif($time['start'] == '09:00' && $day == "Subota")
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1803,6 +1945,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_9') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_9" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1819,6 +1962,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1828,6 +1972,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_10') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_10" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1844,6 +1989,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1853,6 +1999,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_11') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_11" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1869,6 +2016,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1878,6 +2026,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_12') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_12" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1894,6 +2043,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1903,6 +2053,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_13') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_13" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1919,6 +2070,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1928,6 +2080,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_14') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_14" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1944,6 +2097,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1953,6 +2107,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_15') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_15" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1969,6 +2124,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -1978,6 +2134,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_16') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_16" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -1994,6 +2151,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -2003,6 +2161,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_17') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_17" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -2019,6 +2178,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -2028,6 +2188,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_18') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_18" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -2044,6 +2205,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -2053,6 +2215,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_19') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_19" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -2069,6 +2232,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -2078,6 +2242,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_20') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_20" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
@@ -2094,6 +2259,7 @@
     <div>
         @php($varijabla =  $day.'_'.$time['start'])  
         <div class="col-span-6 sm:col-span-3">
+            @error('kolegij_sub_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="kolegij_sub_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Kolegij: </option>
             @foreach($subjectPPs as $subjectPP)
@@ -2103,6 +2269,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-3">
+            @error('ucionica_sub_21') <span class="error" style="color: red;">Polje je obavezno</span> @enderror
             <select wire:model="ucionica_sub_21" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             <option value="" selected>Predavaonica: </option>
             @foreach($classrooms as $classroom)
