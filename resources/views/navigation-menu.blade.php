@@ -21,6 +21,9 @@
                     <x-jet-nav-link href="{{ route('timetable.index') }}" :active="request()->routeIs('timetable.index')">
                         {{ __('Raspored') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('weeks.index') }}" :active="request()->routeIs('weeks.index')">
+                        {{ __('Tjedan') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 

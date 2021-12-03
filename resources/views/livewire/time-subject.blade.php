@@ -40,6 +40,16 @@
                         <option value="zimskiSemestar">Zimski semestar</option>
                     </select>
                 </div>
+
+                <div class="col-md-3">
+                    <label>Tjedan</label>
+                    <select wire:model="byWeek" class="form-control">
+                        <option value="" selected>Nije odabrano</option>
+                        @foreach($byWeeks as $index => $byWeek)
+                            <option value="{{ $byWeeks[$index] }}">{{ $byWeek }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 
                 <div class="col-md-2 py-4">
                     <a class="btn btn-primary"  wire:click="filterSearch()">

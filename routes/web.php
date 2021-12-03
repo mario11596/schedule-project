@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardsController;
 use App\Http\Controllers\SubjectPPsController;
 use App\Http\Controllers\TimetablesController;
+use App\Http\Controllers\WeeksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,5 +45,16 @@ Route::group(['auth:sanctum', 'verified'], function(){
 
     //Routes for Dashboard
     Route::get('/dashboard', [DashboardsController::class, 'index'])->name('dashboard');
+    
+    //Route::get('/dashboard/pdf', [DashboardsController::class, 'index'])->name('dashboard');
+
+    //Router for Week
+    Route::get('/week', [WeeksController::class, 'index'])->name('weeks.index');
+    Route::post('/week', [WeeksController::class, 'store'])->name('weeks.store');
+    Route::get('/week/create', [WeeksController::class, 'create'])->name('weeks.create');
+    Route::get('/week/{week}/edit', [WeeksController::class, 'edit'])->name('weeks.edit');
+    Route::post('/week/{week}', [WeeksController::class, 'update'])->name('weeks.update');
+    Route::get('/week/{week}', [WeeksController::class, 'destroy'])->name('weeks.destroy');
+
    
 });

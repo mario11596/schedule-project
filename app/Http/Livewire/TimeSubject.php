@@ -399,10 +399,10 @@ class TimeSubject extends Component
 
     public $byCourse = "smjer1";
     public $bySemester = "ljetniSemestar";
+    public $byWeeks = array();
+    public $byWeek = '1';
 
     public $kolegiji_svi;
-
-
 
     public function mount(){
         $this->classrooms = Classroom::all();
@@ -413,6 +413,10 @@ class TimeSubject extends Component
         $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->get();
         
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
+
+        for($i = 1; $i <= 15; $i++){
+            array_push($this->byWeeks, $i);
+        }
     }
 
     public function render()
@@ -423,8 +427,9 @@ class TimeSubject extends Component
     }
 
     public function filterSearch(){
+        $this->byWeek = (string)$this->byWeek;
         $this->kolegiji_svi = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->pluck('id');
-        $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->get();
+        $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->where('week', $this->byWeek)->get();
 
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
         
@@ -457,7 +462,7 @@ class TimeSubject extends Component
                         'comment' => $this->{"komentar_".$dayString."_".$timeString},              
                         'day' => $day,
                         'hours' => $time['start'],
-                        'week' => '1'
+                        'week' => $this->byWeek,
                     ]); 
                 }
             }

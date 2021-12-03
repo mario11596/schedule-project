@@ -1,12 +1,8 @@
 <x-app-layout>
-    <x-slot name="header">
-
-        <div class="flex justify-between">       
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight ">
-                {{ __('Raspored sati') }}
-            </h2>
-            <a class="btn btn-primary" href="">PDF format</a>
-        </div>
+    <x-slot name="header">     
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight ">
+            {{ __('Raspored sati') }}
+        </h2>
     </x-slot>
 
     <div class="py-2">
@@ -30,6 +26,16 @@
                             <option value="zimskiSemestar" {{( $bySemester == 'zimskiSemestar') ? 'selected' : ''}}>Zimski semestar</option>
                         </select>
                     </div>
+
+                    <div class="col-md-3">
+                        <label>Tjedan</label>
+                        <select name="byWeek" class="form-control">
+                            <option value="" selected>Nije odabrano</option>
+                                @foreach($byWeeks as $key => $byWeekk)
+                                    <option value="{{ $key+1 }}" {{( $key+1 == $byWeek ) ? 'selected' : ''}}>{{ $byWeekk }}</option>
+                                @endforeach
+                        </select>
+                    </div>
                     
                     <div class="col-md-2 py-4">
                         <button class="btn btn-primary" type="submit"> 
@@ -37,11 +43,17 @@
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>
                         </button>
+                        &nbsp;
+                        <button type="submit" class="btn btn-success btn-sm" name="exportPDF">PDF format</button>
+                        
                     </div>
                 </div>
             </form>
 
-            
+           <div class="bg-white">
+            <h4> &nbsp;Rapored vrijedi za tjedan od: {{ $byWeek_start }} </h4>
+           </div>
+
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <table class="items-center bg-transparent w-full table table-bordered ">
                 <thead>
