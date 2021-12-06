@@ -410,7 +410,7 @@ class TimeSubject extends Component
        
         //$this->lecturePeriods = LecturePeriod::all();
         $this->kolegiji_svi = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->pluck('id');
-        $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->get();
+        $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->where('week', $this->byWeek)->get();
         
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
 
@@ -504,12 +504,6 @@ class TimeSubject extends Component
     }
 
     public function update(){
-       /* $validate = $this->validate([
-            'first_name'    =>  'required',
-            'last_name'     =>  'required',
-            'gender'        =>  'required'
-        ]);*/
-
         $data = LecturePeriod::find($this->data_id);
 
         $data->update([

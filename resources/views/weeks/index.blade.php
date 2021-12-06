@@ -8,23 +8,6 @@
 
     <div class="py-2">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
-
-                @if ($message = Session::get('info'))
-                    <div class="alert alert-info">
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
-
-                @if ($message = Session::get('warning'))
-                    <div class="alert alert-warning">
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
         <div class="flex justify-between my-2">
                 <div class="flex">
                   <a href="{{ route('dashboard') }}" class="btn btn-outline-primary"> 
@@ -42,15 +25,33 @@
                     </svg>
                   </a>
               </div>
+              @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('info'))
+                    <div class="alert alert-info">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+
+                @if ($message = Session::get('warning'))
+                    <div class="alert alert-warning">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
               <table class="items-center bg-transparent w-full table table-bordered ">
               <thead>
-                <tr>
+                <tr style="background-color:rgb(255, 229, 118);" >
                 <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Br.</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Tjedan po redu</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Smjer</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Semestar održavanja</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Početak održavanja</th>
+                  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Status</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Opcije</th>
                 </tr>
               </thead>
@@ -61,7 +62,23 @@
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $week->name }}</td>
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $week->course }}</td>
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $week->semester }}</td>
-                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ $week->start_day}}</td>
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-center">{{ date_create_from_format("Y-m-d", $week->start_day )->format("d.m.Y.") }}</td>
+                  @if(strcmp(date('Y-m-d'), $week->start_day) > 0)
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="bi bi-check-circle" style="margin: auto;" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                      </svg>
+                    </td>
+                   
+                  @else
+                  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" style="margin: auto;" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                  </td>
+                  @endif
                   <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 flex justify-between" >
                   <a href="{{ route('weeks.edit', $week->id) }}"> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="bi bi-pencil-square" viewBox="0 0 16 16">

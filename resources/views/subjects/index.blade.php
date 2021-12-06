@@ -36,7 +36,7 @@
 
                   <div class="input-group px-2">
                     <form action="{{ route('search') }}" method="GET" role="search">
-                        <input type="text" placeholder="Pretraži..." name="search" required/>
+                        <input type="text" style="border-radius: 10px;" placeholder="Pretraži..." name="search" required/>
                             <button type="submit" class="btn btn-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" type="submit">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -56,7 +56,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
               <table class="items-center bg-transparent w-full table table-bordered ">
               <thead>
-                <tr>
+                <tr style="background-color:rgb(255, 229, 118);" >
                 <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Br.</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Naziv kolegija</th>
                   <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">Smjer</th>

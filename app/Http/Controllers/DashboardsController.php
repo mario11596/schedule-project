@@ -22,6 +22,8 @@ class DashboardsController extends Controller
         $bySemester = isset($request->bySemester) ? $request->bySemester : '';
         $byWeek = isset($request->byWeek) ? $request->byWeek : '';
         $byWeek_start = '';
+        $byWeek_end = '';
+        
 
         $lecturePeriods = $this->searchFilter($byCourse,$bySemester, $byWeek);
       
@@ -29,7 +31,8 @@ class DashboardsController extends Controller
             $byWeek_start = Week::where('name', $byWeek)->where('course', $byCourse)->where('semester', $bySemester)->first();
             
             if($byWeek_start != NULL){
-                $byWeek_start = date_create_from_format("Y-m-d", $byWeek_start->start_day)->format("d.m.Y."); 
+                $byWeek_start = date_create_from_format("Y-m-d", $byWeek_start->start_day)->format("d.m.Y.");
+                $byWeek_end = date('d.m.Y.', strtotime($byWeek_start. ' + 6 days'));
             }
         }
         
@@ -60,11 +63,11 @@ class DashboardsController extends Controller
         }
         
         if($request->has('exportPDF')){
-            $pdf = PDF::loadView('pdfView',compact('lecturePeriods', 'weekDays', 'timeRange'))->setPaper('A4', 'landscape');
+            $pdf = PDF::loadView('pdfView',compact('lecturePeriods', 'weekDays', 'timeRange', 'byWeek_start', 'byWeek_end'))->setPaper('A4', 'landscape');
             
             return $pdf->download('raspored-sati.pdf');
         }
-        return view('dashboard', compact('weekDays','byWeek','timeRange','byWeeks', 'byWeek_start', 'lecturePeriods', 'byCourse','bySemester'));
+        return view('dashboard', compact('weekDays','byWeek','timeRange','byWeeks', 'byWeek_start', 'byWeek_end', 'lecturePeriods', 'byCourse','bySemester'));
     }
 
     public function searchFilter($byCourse, $bySemester, $byWeek){

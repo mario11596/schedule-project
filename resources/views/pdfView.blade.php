@@ -7,6 +7,9 @@
    
 </head>
 <body>
+<div>
+    <h4 class="font-semibold"> &nbsp;Rapored vrijedi za tjedan od: {{ $byWeek_start }} - {{ $byWeek_end }}</h4>
+</div>
 <table style="border-collapse: collapse;">
         <thead style="width: 100%;">
             <tr>

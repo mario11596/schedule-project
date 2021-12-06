@@ -44,22 +44,27 @@
                             </svg>
                         </button>
                         &nbsp;
-                        <button type="submit" class="btn btn-success btn-sm" name="exportPDF">PDF format</button>
-                        
+                        <button type="submit" class="btn btn-success btn-sm" name="exportPDF">PDF format</button> 
                     </div>
                 </div>
             </form>
-
-           <div class="bg-white">
-            <h4> &nbsp;Rapored vrijedi za tjedan od: {{ $byWeek_start }} </h4>
-           </div>
+            @if(isset($byWeek_start))
+                <div class="bg-white rounded-pill px-2">
+                    <h5 class="font-semibold"> &nbsp;Rapored vrijedi za tjedan od: {{ $byWeek_start }} - {{ $byWeek_end }}</h5>
+                </div>
+            @elseif(!isset($byWeek_start) && ($byCourse != '' || $bySemester != ''))
+                <div class="rounded-pill px-2 " style="background: red; text-align: center;">
+                    <h5 class="font-semibold"> &nbsp;Nije odabran datum početka nastave!</h5>
+                </div>
+           @endif
+           
 
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <table class="items-center bg-transparent w-full table table-bordered ">
                 <thead>
-                    <th class="text-center" width="125">Vrijeme</th>
+                    <th class="text-center" style="background-color:rgb(255, 229, 118);" width="125">Vrijeme</th>
                     @foreach($weekDays as $day)
-                        <th class="text-center">{{ $day }}</th>
+                        <th class="text-center" style="background-color:rgb(255, 229, 118);">{{ $day }}</th>
                     @endforeach
                 </thead>
                 <tbody class="item-center">

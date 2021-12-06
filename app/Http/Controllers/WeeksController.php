@@ -9,7 +9,7 @@ class WeeksController extends Controller
 {
     public function index(){
 
-        $weeks = Week::all();
+        $weeks = Week::orderBy('course', 'ASC')->orderBy('semester', 'ASC')->get();
 
         return view('weeks.index', compact('weeks'));
     }
@@ -65,7 +65,7 @@ class WeeksController extends Controller
 
         $week->save();
 
-        return redirect('/week')->with('info', 'Uspješno se ažuriran tjedan');
+        return redirect('/week')->with('info', 'Uspješno je ažuriran tjedan');
     }
 
     public function destroy($id){

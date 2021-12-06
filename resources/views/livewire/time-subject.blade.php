@@ -62,9 +62,9 @@
 
             <table class="items-center bg-transparent w-full table table-bordered ">
                 <thead>
-                    <th class="text-center" width="125">Vrijeme</th>
+                    <th class="text-center" style="background-color:rgb(255, 229, 118);"  width="125">Vrijeme</th>
                     @foreach($weekDays as $day)
-                        <th class="text-center">{{ $day }}</th>
+                        <th class="text-center" style="background-color:rgb(255, 229, 118);" >{{ $day }}</th>
                     @endforeach
                 </thead>
                 <tbody class="item-center">
