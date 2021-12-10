@@ -7,10 +7,7 @@
    
 </head>
 <body>
-<div>
-    <h4 class="font-semibold"> &nbsp;Rapored vrijedi za tjedan od: {{ $byWeek_start }} - {{ $byWeek_end }}</h4>
-</div>
-<table style="border-collapse: collapse;">
+    <table style="border-collapse: collapse;">
         <thead style="width: 100%;">
             <tr>
             <th style="border: 2px solid black;">Vrijeme</th>
@@ -24,27 +21,28 @@
                 <tr >
                     <td style="border: 2px solid black;">
                         {{ $time['start'] }} - {{ $time['end'] }}
-                       
                     </td>
                     @foreach($weekDays as $day)  
                         <td style="border: 2px solid black; text-align: center">
                             <div>
-                                    @php($lecturePeriod = $lecturePeriods->where('day', $day)->where('hours', $time['start'])->first())                               
+                                @php($lecturePeriod = $lecturePeriods->where('day', $day)->where('hours', $time['start'])->first())                               
                                 @if($lecturePeriod)                                 
-                                    <form>
-                                        <div>
-                                        {{$lecturePeriod->subjectPP->name}}
-                                        </div>
-                                
-                                        <div>
-                                            Predavaonica: {{$lecturePeriod->classroom->name }}
-                                        </div>
+                                <form>
+                                    <div>
+                                    {{$lecturePeriod->subjectPP->name}}
+                                    </div>
+                            
+                                    <div>
+                                        Predavaonica: {{$lecturePeriod->classroom->name }}
+                                    </div>
 
+                                    @if($lecturePeriod->comment)
                                         <div>
-                                            Dodatni komentar: {{$lecturePeriod->comment}}
-                                        </div>     
-                                    </form>
-                                    @endif
+                                            Komentar: {{$lecturePeriod->comment}}
+                                        </div>   
+                                    @endif  
+                                </form>
+                                @endif
                             </div> 
                         </td>            
                     @endforeach

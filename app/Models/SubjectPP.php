@@ -25,6 +25,4 @@ class SubjectPP extends Model
     public function lecturePeriodsFilter(){
         return $this->hasMany(LecturePeriod::class, 'course');
     }
-
-
 }

@@ -5,13 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\LecturePeriod;
 use App\Models\SubjectPP;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 class TimetablesController extends Controller
 {
-
     public function index(){
-       
         $subjectAll = SubjectPP::all();
 
         $weekDays = [
@@ -35,9 +32,11 @@ class TimetablesController extends Controller
             ]);    
         } while ($time->format("H:i") !== $to);
 
-        
-        return view('timetable.index', compact('weekDays','timeRange', 'subjectAll'));
-    }
+        $byWeeks = [];
+        for($i = 1; $i <= 15; $i++){
+            array_push($byWeeks, $i);
+        }
 
-    
+        return view('timetable.index', compact('weekDays','timeRange', 'subjectAll', 'byWeeks'));
+    }
 }

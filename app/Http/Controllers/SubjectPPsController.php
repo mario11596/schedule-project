@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class SubjectPPsController extends Controller
 {
     public function index(){
-
         $subjects = SubjectPP::all();
 
         return view('subjects.index', compact('subjects'));
@@ -22,7 +21,6 @@ class SubjectPPsController extends Controller
 
 
     public function store(Request $request){
-
         $request->validate([
             'name' => 'required',
             'course' => 'required',
@@ -38,18 +36,16 @@ class SubjectPPsController extends Controller
         $subject->current_hours = request('hours');
 
         $subject->save();
-        return redirect('/subject')->with('success', 'Uspješno spremljen novi predmet!');
+        return redirect('/subject')->with('success', 'Uspješno je spremljen novi kolegij!');
     }
 
 
     public function edit(SubjectPP $subject){
-        
         return view('subjects.edit', compact('subject'));
     }
 
 
     public function update(Request $request, $id){
-
         $subject = SubjectPP::where("id","=",$id)->get()->first();
 
         $request->validate([
@@ -66,13 +62,14 @@ class SubjectPPsController extends Controller
 
         $subject->save();
 
-        return redirect('/subject')->with('info', 'Uspješno se ažuriran kolegij');
+        return redirect('/subject')->with('info', 'Uspješno je ažuriran kolegij');
     }
 
+    
     public function destroy($id){
         SubjectPP::where('id', $id)->delete();
 
-        return redirect('/subject');
+        return redirect('/subject')->with('info', 'Uspješno je izbrisan kolegij');
     }
 
     public function search(Request $request){

@@ -9,15 +9,10 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 //use Barryvdh\DomPDF\PDF;
 use Barryvdh\DomPDF\Facade as PDF;
-use DateTime;
 
 class DashboardsController extends Controller
 {
-
-
     public function index(Request $request){
-         
-       
         $byCourse = isset($request->byCourse) ? $request->byCourse : '';
         $bySemester = isset($request->bySemester) ? $request->bySemester : '';
         $byWeek = isset($request->byWeek) ? $request->byWeek : '';
@@ -71,19 +66,9 @@ class DashboardsController extends Controller
     }
 
     public function searchFilter($byCourse, $bySemester, $byWeek){
-        
         $kolegiji_svi = SubjectPP::where('course',$byCourse)->where('semester', $bySemester)->pluck('id');
         $lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $kolegiji_svi)->where('week', $byWeek)->get();
      
         return $lecturePeriods;
     }  
-
-    /*public function createPDF(){
-        
-    
-        
-        $pdf = PDF::loadView('pdfView',compact('lecturePeriods', 'weekDays', 'timeRange'))->setPaper('a3', 'landscape');
-        return $pdf->download('raspored-sati.pdf');
-
-    }*/
 }

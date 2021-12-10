@@ -87,9 +87,11 @@
                                                     Predavaonica: {{$lecturePeriod->classroom->name }}
                                                 </div>
 
+                                                @if($lecturePeriod->comment)
                                                 <div class="col-span-6 sm:col-span-3 text-center">
-                                                    Dodatni komentar: {{$lecturePeriod->comment}}
-                                                </div>     
+                                                    Komentar: {{$lecturePeriod->comment}}
+                                                </div>
+                                                @endif     
                                             </form>
                                             @endif
                                     </div> 

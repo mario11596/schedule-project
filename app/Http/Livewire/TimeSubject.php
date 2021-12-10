@@ -21,12 +21,6 @@ class TimeSubject extends Component
     public $timeRange;
     public $weekDays; 
    
-    /*public $timetable = [
-        'classrooms',
-        'subjectPPs',
-        'comments'
-    ];*/
-
     //varijable za opći prikaz
     public $classrooms;
     public $classroom1;
@@ -44,8 +38,8 @@ class TimeSubject extends Component
     public $updateSubject;
     public $updateClassroom;
     public $updateComment;
-    public $updateDay;
-    public $updateHours;
+    public $updateDay = "";
+    public $updateHours = "";
 
     protected $rules = [
         'timetable.classrooms' => 'required',
@@ -398,33 +392,27 @@ class TimeSubject extends Component
     public $komentar_sub_21;
 
     public $byCourse = "smjer1";
-    public $bySemester = "ljetniSemestar";
-    public $byWeeks = array();
+    public $bySemester = "zimskiSemestar";
+    public $byWeeks;
     public $byWeek = '1';
 
     public $kolegiji_svi;
 
     public function mount(){
         $this->classrooms = Classroom::all();
-        //$this->subjectPPs = SubjectPP::all();
-       
-        //$this->lecturePeriods = LecturePeriod::all();
         $this->kolegiji_svi = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->pluck('id');
         $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->where('week', $this->byWeek)->get();
         
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
-
-        for($i = 1; $i <= 15; $i++){
-            array_push($this->byWeeks, $i);
-        }
     }
+
 
     public function render()
     {
-        
         return view('livewire.time-subject',[
             'lecturePeriods' => $this->lecturePeriods]);
     }
+
 
     public function filterSearch(){
         $this->byWeek = (string)$this->byWeek;
@@ -432,11 +420,10 @@ class TimeSubject extends Component
         $this->lecturePeriods = LecturePeriod::whereIn('subjectPP_id', $this->kolegiji_svi)->where('week', $this->byWeek)->get();
 
         $this->subjectPPs = SubjectPP::where('course',$this->byCourse)->where('semester', $this->bySemester)->get();
-        
     }
 
+
     public function submit($day_time){
-    
         foreach($this->weekDays as $day){
             foreach($this->timeRange as $time){
                 $newString = $day.'_'.$time['start'];
@@ -446,7 +433,6 @@ class TimeSubject extends Component
 
                     $timeString = strrchr($day_time, '_');
                     $timeString = substr($timeString, 1, 2);
-                    //$timeString = substr($time['start'], 0, 2);
 
                     if($timeString[0] == "0"){
                         $timeString = substr($timeString, 1, 1);
@@ -455,6 +441,17 @@ class TimeSubject extends Component
                         "kolegij_".$dayString."_".$timeString  => 'required',
                         "ucionica_".$dayString."_".$timeString => 'required',
                      ]);
+
+                    $check_classroom = LecturePeriod::where('classroom_id', $this->{"ucionica_".$dayString."_".$timeString})
+                                                    ->where('hours', $time['start'])
+                                                    ->where('day', $day)->where('week', $this->byWeek)
+                                                    ->get()->first();
+                    if(($check_classroom)){
+                        $this->{"ucionica_".$dayString."_".$timeString} = "";
+                        session()->flash('warning','Odabrana predavaonica je zauzeta!');
+
+                        return $this->mount();
+                    }
                      
                     LecturePeriod::create([
                         'subjectPP_id' => $this->{"kolegij_".$dayString."_".$timeString},           
@@ -470,14 +467,18 @@ class TimeSubject extends Component
         $hours_duration = SubjectPP::where('id',$this->{"kolegij_".$dayString."_".$timeString})->first();
         $hours_duration->current_hours = ($hours_duration->current_hours) - 1;
         $hours_duration->save();
-       
+
+        $this->{"ucionica_".$dayString."_".$timeString} = "";
+        $this->{"komentar_".$dayString."_".$timeString} = "";
+        $this->{"kolegij_".$dayString."_".$timeString} = "";
+        
         session()->flash('message','Uspješno spremljen novi termin!');
 
        $this->mount();
     }
 
+
     public function delete(){
-        //dd($this->data_id);
         $data = LecturePeriod::find($this->data_id);
 
         if($data){
@@ -492,6 +493,7 @@ class TimeSubject extends Component
         }   
     }
 
+
     public function edit($id)
     {
         $data = LecturePeriod::findOrFail($id);
@@ -502,6 +504,7 @@ class TimeSubject extends Component
         $this->updateDay = $data->day;
         $this->updateHours = $data->hours;
     }
+
 
     public function update(){
         $data = LecturePeriod::find($this->data_id);
@@ -514,8 +517,8 @@ class TimeSubject extends Component
 
         session()->flash('message', 'Termin je uspješno ažuriran!');
         $this->emit('lectureStore');
-
-        return redirect(request()->header('Referer'));
+        $this->mount();
+        //return redirect(request()->header('Referer'));
     }  
 }
 

@@ -6,9 +6,8 @@
         </h2>
     </x-slot>
 
-    
     <div>
-        @livewire('time-subject', ['timeRange' => $timeRange, 'weekDays' => $weekDays])                   
+        @livewire('time-subject', ['timeRange' => $timeRange, 'weekDays' => $weekDays, 'byWeeks' => $byWeeks])                   
     </div>
     @livewireScripts
 </x-app-layout>

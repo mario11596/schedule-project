@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class WeeksController extends Controller
 {
     public function index(){
-
-        $weeks = Week::orderBy('course', 'ASC')->orderBy('semester', 'ASC')->get();
+        $weeks = Week::orderBy('course', 'ASC')->orderBy('semester', 'ASC')->orderBy('name', 'ASC')->get();
 
         return view('weeks.index', compact('weeks'));
     }
@@ -21,7 +20,6 @@ class WeeksController extends Controller
 
 
     public function store(Request $request){
-
         $request->validate([
             'name' => 'required|integer',
             'start_day' =>'required',
@@ -34,20 +32,19 @@ class WeeksController extends Controller
         $week->start_day = request('start_day');
         $week->course = request('course');
         $week->semester = request('semester');
-       
-
         $week->save();
-        return redirect('/week')->with('success', 'Uspješno spremljen novi tjedan!');
+
+        return redirect('/week')->with('success', 'Uspješno je spremljen novi tjedan!');
     }
 
+
     public function edit(Week $week){
-        
+
         return view('weeks.edit', compact('week'));
     }
 
 
     public function update(Request $request, $id){
-
         $week = Week::where("id","=",$id)->get()->first();
 
         $request->validate([
@@ -61,17 +58,15 @@ class WeeksController extends Controller
         $week->start_day = request('start_day');
         $week->course = request('course');
         $week->semester = request('semester');
-        
-
         $week->save();
 
         return redirect('/week')->with('info', 'Uspješno je ažuriran tjedan');
     }
 
+    
     public function destroy($id){
         Week::where('id', $id)->delete();
 
-        return redirect('/week');
+        return redirect('/week')->with('info', 'Uspješno je izbrisan tjedan');
     }
-
 }

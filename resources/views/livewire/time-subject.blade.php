@@ -1,6 +1,5 @@
 <div class="py-10 d-flex">
-    <div class="col-sm-2 col-md-2 col-lg-2">
-                
+    <div class="col-sm-2 col-md-2 col-lg-2">   
         <div class="flex flex-col w-64 h-screen px-4 py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
             <ol><label class="font-semibold text-gray-800 dark:text-white">Preostali sati:</label></ol>
                 @foreach($subjectPPs as $subject)
@@ -14,12 +13,12 @@
         </div>
     </div>
 
-
-
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 col-sm-10 col-md-10 col-lg-10 mr-auto">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             @if(session()->has('message'))
                 <div class="alert alert-success"> {{ session('message')}} </div>
+            @elseif(session()->has('warning'))
+                <div class="alert alert-warning"> {{ session('warning')}} </div>
             @endif
 
             <div class="row mb-3 p-2 ">

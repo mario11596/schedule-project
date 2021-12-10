@@ -37,16 +37,16 @@
                     <div class="col-span-6 sm:col-span-3">
                         <label for="course" class="block text-sm font-medium text-gray-700">Smjer: </label>
                         <select id="course" name="course" value="{{ $subject->course }}" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">   
-                        <option value="smjer1" {{($subject->course) ? 'selected' : ''}}>Smjer1</option>
-                        <option value="smjer2" {{($subject->course) ? 'selected' : ''}}>Smjer2</option> 
+                        <option value="smjer1" {{($subject->course == 'smjer1') ? 'selected' : ''}}>Smjer1</option>
+                        <option value="smjer2" {{($subject->course == 'smjer2') ? 'selected' : ''}}>Smjer2</option> 
                         </select>
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
                         <label for="semester" class="block text-sm font-medium text-gray-700">Semestar: </label>
                         <select id="semester" name="semester" value="{{ $subject->semester }}" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                        <option value="ljetniSemestar" {{($subject->semester) ? 'selected' : ''}}>Ljetni semestar</option>
-                        <option value="zimskiSemestar" {{($subject->semester) ? 'selected' : ''}}>Zimski semestar</option>
+                        <option value="ljetniSemestar" {{($subject->semester == 'ljetniSemestar') ? 'selected' : ''}}>Ljetni semestar</option>
+                        <option value="zimskiSemestar" {{($subject->semester == 'zimskiSemestar') ? 'selected' : ''}}>Zimski semestar</option>
                         </select>
                     </div>
 
