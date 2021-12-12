@@ -6,33 +6,21 @@ use App\Models\Classroom;
 use App\Models\LecturePeriod;
 use App\Models\SubjectPP;
 use Livewire\Component;
-use Illuminate\Http\Request;
-use Livewire\Request as LivewireRequest;
-use Illuminate\Support\Str;
 
 
 class TimeSubject extends Component
 {   
-    public $param1;
-    public $param2;
     public $day;
     public $hours;
     public $lecturePeriods;
     public $timeRange;
     public $weekDays; 
    
-    //varijable za opći prikaz
+    
     public $classrooms;
-    public $classroom1;
     public $subjectPPs;
-    public $subjectPP1;
-    public $comment1;
 
-    public $classroom;
-    public $subjectPP;
-    public $comment;
 
-    //varijable za update
     public $data;
     public $data_id;
     public $updateSubject;
@@ -518,7 +506,6 @@ class TimeSubject extends Component
         session()->flash('message', 'Termin je uspješno ažuriran!');
         $this->emit('lectureStore');
         $this->mount();
-        //return redirect(request()->header('Referer'));
     }  
 }
 

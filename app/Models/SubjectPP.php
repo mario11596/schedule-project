@@ -21,7 +21,7 @@ class SubjectPP extends Model
         return $this->hasMany(LecturePeriod::class, 'lecturePeriod_id');
     }
 
-        //za filter
+    
     public function lecturePeriodsFilter(){
         return $this->hasMany(LecturePeriod::class, 'course');
     }

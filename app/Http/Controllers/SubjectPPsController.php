@@ -62,14 +62,14 @@ class SubjectPPsController extends Controller
 
         $subject->save();
 
-        return redirect('/subject')->with('info', 'Uspješno je ažuriran kolegij');
+        return redirect('/subject')->with('info', 'Uspješno je ažuriran kolegij!');
     }
 
     
     public function destroy($id){
         SubjectPP::where('id', $id)->delete();
 
-        return redirect('/subject')->with('info', 'Uspješno je izbrisan kolegij');
+        return redirect('/subject')->with('info', 'Uspješno je izbrisan kolegij!');
     }
 
     public function search(Request $request){

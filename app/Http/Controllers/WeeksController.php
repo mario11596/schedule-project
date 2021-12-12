@@ -60,13 +60,13 @@ class WeeksController extends Controller
         $week->semester = request('semester');
         $week->save();
 
-        return redirect('/week')->with('info', 'Uspješno je ažuriran tjedan');
+        return redirect('/week')->with('info', 'Uspješno je ažuriran tjedan!');
     }
 
     
     public function destroy($id){
         Week::where('id', $id)->delete();
 
-        return redirect('/week')->with('info', 'Uspješno je izbrisan tjedan');
+        return redirect('/week')->with('info', 'Uspješno je izbrisan tjedan!');
     }
 }

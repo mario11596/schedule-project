@@ -93,7 +93,7 @@
                                                 </div>
                                                 @endif     
                                             </form>
-                                            @endif
+                                        @endif
                                     </div> 
                                 </td>            
                             @endforeach
