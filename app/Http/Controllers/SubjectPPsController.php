@@ -87,5 +87,6 @@ class SubjectPPsController extends Controller
         } else {
             return redirect('/subject')->with('warning', 'Nema traženog kolegija!');
         }
+        
     }
 }
